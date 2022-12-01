@@ -1,0 +1,30 @@
+
+{% block title %}ADD TEAM{% endblock %}
+
+{% block content %}
+<form method="post" action="/players/addplayer">
+    <p>First Name:</p>
+    <p><input type="text" name="fn" /></p>
+    <p>Last Name:</p>
+    <p><input type="text" name="ln" /></p>
+    <p>Year of Birth:</p>
+    <p><input type="integer" name="yob" /></p>
+    <p>Gender:</p>
+    <p><input type="text" name="gen" /></p>
+    <p>Address-State:</p>
+    <p><input type="text" name="state" /></p>
+    <p>Address-City:</p>
+    <p><input type="text" name="city" /></p>
+    <p>Address-Street:</p>
+    <p><input type="text" name="st" /></p>
+    <p>Elo Rating:</p>
+    <p><input type="integer" name="er" /></p>
+    <p>Team ID:</p>
+    <p><input type="integer" name="tid" /></p>
+    <p>Age:</p>
+    <p><input type="text" name="age" /></p>
+    <p>Team Log:</p>
+    <p><input type="text" name="tlog" /></p>
+    <p><input type="submit" value="submit" /></p>
+</form>
+{% endblock %}
