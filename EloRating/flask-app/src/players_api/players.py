@@ -58,6 +58,7 @@ def addplayer():
                 {team}, {age}, {tlog});
                 '''
         cursor.execute(query)
+        db.get_db().commit()
         current_app.logger.info(query)
         return "Player Added"
     else:
