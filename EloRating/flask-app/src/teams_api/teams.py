@@ -63,4 +63,5 @@ def addteam():
             "{team_name}", "{captain_name}", {owner_id}, {elo_rating});
             '''
     cursor.execute(query)
+    db.get_db().commit()
     return "Team Added"
