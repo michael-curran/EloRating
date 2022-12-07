@@ -1,5 +1,8 @@
 ## EloRating:
-    The objective of the EloRating application is to allow people who work in competitive organizations to be able to organise people into league and/or       teams. As well it tracks the elo rating a player through out there competitive tenur. In the app you can add players to teams and navigate through
+    The objective of the EloRating application is to allow people who work in competitive organizations 
+    to be able to organise people into league and/or       
+    teams. As well it tracks the elo rating a player through out there competitive tenur. In the app you can add players 
+    to teams and navigate through
     the players teams and owners of said teams.
 
 # Production:
