@@ -5,7 +5,13 @@
     the players teams and owners of said teams.
 
 # Production:
-     In order to develop this application we made a relational database using SQL. Then we connected the said database to a flask application here giving        certain web urls access to different parts of the database and posting them. As well as a form post that takes in data that a user submits to add to a      given data base. Then the front end part was developed on appsmith. There we added tables and containers making the information easier to understand        and input data easier to input.
+     In order to develop this application we made a relational database using SQL. Then we connected the 
+     said database to a flask application here giving        
+     certain web urls access to different parts of the database and posting them. As well as a form post 
+     that takes in data that a user submits to add to a     
+     given data base. Then the front end part was developed on appsmith. 
+     There we added tables and containers making the information easier to understand      
+     and input data easier to input.
 
 # Runnning the Program:
     In order to run the given program it's integral to run a docker file. Below there is a step by step guide on how to use the github to build a docker       file. After that we then set up an ngrok system to send the website on whatever port to an ngrok url. Through that we then give the ngrok url to the       appsmith in order to get the appsmith frontend benefits.
