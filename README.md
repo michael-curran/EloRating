@@ -14,7 +14,10 @@
      and input data easier to input.
 
 # Runnning the Program:
-    In order to run the given program it's integral to run a docker file. Below there is a step by step guide on how to use the github to build a docker       file. After that we then set up an ngrok system to send the website on whatever port to an ngrok url. Through that we then give the ngrok url to the       appsmith in order to get the appsmith frontend benefits.
+    In order to run the given program it's integral to run a docker file. Below there is a step by step 
+    guide on how to use the github to build a docker file. After that we then set up an ngrok system to 
+    send the website on whatever port to an ngrok url. Through that we then give the ngrok url to the       
+    appsmith in order to get the appsmith frontend benefits.
 
 ## How to setup and start the containers
 **Important** - you need Docker Desktop installed
