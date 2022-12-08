@@ -30,6 +30,11 @@
 1. Start the containers with `docker compose up`.  To run in detached mode, run `docker compose up -d`. 
 
 
+https://www.youtube.com/watch?v=4lqaHUTb32A
+
+
+
+
 
 
 
