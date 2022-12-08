@@ -4,7 +4,7 @@ from src import db
 
 team_blueprint = Blueprint('team_blueprint', __name__)
 
-# Get all team from the DB
+# Get all team info from the DB
 @team_blueprint.route('/info', methods=['GET'])
 def get_teamsinfo():
     cursor = db.get_db().cursor()
@@ -14,40 +14,22 @@ def get_teamsinfo():
     theData = cursor.fetchall()
     for row in theData:
         json_data.append(dict(zip(row_headers, row)))
- #   the_response = make_response(jsonify(json_data))
- #   the_response.status_code = 200
- #   the_response.mimetype = 'application/json'
+
     return jsonify(json_data)
 
-# get the top 5 teams from the database
-@team_blueprint.route('/3MostWins')
-def get_mostwins():
+@team_blueprint.route('/teamname', methods=['GET'])
+def get_teamsname():
     cursor = db.get_db().cursor()
-    query = '''
-        SELECT *
-        FROM Team
-        ORDER BY TeamWins DESC
-        LIMIT 3ß;
-    '''
-    cursor.execute(query)
-       # grab the column headers from the returned data
-    column_headers = [x[0] for x in cursor.description]
-
-    # create an empty dictionary object to use in 
-    # putting column headers together with data
+    cursor.execute('select TeamID as value, TeamName as label from Team')
+    row_headers = [x[0] for x in cursor.description]
     json_data = []
-
-    # fetch all the data from the cursor
     theData = cursor.fetchall()
-
-    # for each of the rows, zip the data elements together with
-    # the column headers. 
     for row in theData:
-        json_data.append(dict(zip(column_headers, row)))
+        json_data.append(dict(zip(row_headers, row)))
 
     return jsonify(json_data)
 
-
+#post request to add a team to a db
 @team_blueprint.route('/addteam', methods=["POST"])
 def addteam():
     team_wins = request.form['tw']

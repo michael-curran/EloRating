@@ -66,7 +66,7 @@ CREATE TABLE Team
         FOREIGN KEY (OwnerID) REFERENCES Owners(OwnerID)
 );
 
-Insert into Team(TeamWins, TeamLoss, TeamName, CaptainID, OwnerID, EloRating)
+Insert into Team(TeamWins, TeamLoss, TeamName, CaptainFirstName, OwnerID, EloRating)
 Values (15, 45, 'dandreev0', 'Michael', 1, 30421),
 (22, 4, 'hdax1', 'Sahil', 2, 6),
 (98, 122, 'larnold2', 'Kevin', 3, 45);
@@ -84,13 +84,13 @@ CREATE TABLE Player
     EloRating       INTEGER         not null,
     Play_TeamID     INTEGER,
     Age             Integer         NOT NULL,
-    T_LogID         Integer         not null,
+    SkillID         Integer         NOT NULL,
         PRIMARY KEY (PlayerID),
         FOREIGN KEY (Play_TeamID) REFERENCES Team(TeamID),
-        FOREIGN KEY (T_LogID) REFERENCES T_log(LogID)
+        FOREIGN KEY (SkillID) REFERENCES Skill(SkillID)
 );
 
-Insert into Player(firstName, lastName, birthdayYear, gender, stateAddress, cityAddress, streetAddress, EloRating, Play_TeamID, Age, T_LogID)
+Insert into Player(firstName, lastName, birthdayYear, gender, stateAddress, cityAddress, streetAddress, EloRating, Play_TeamID, Age, SkillID)
 Values ('Moe', 'Blumire', 2001, 'Male', 'Virginia', 'Norfolk', 'Village Green', '5847', 1, 20, 1),
 ('Hillel', 'Tomblett', 2012, 'Male', 'Georgia', 'Duluth', 'Loeprich', '04', 2, 21, 2),
 ('Ernest', 'Gurwood', 2005, 'Non-binary', 'Louisiana', 'Lake Charles', 'Commercial', '154', 3, 22, 3),

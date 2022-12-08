@@ -5,6 +5,7 @@ from src import db
 
 matchup_blueprint = Blueprint('matchup_blueprint', __name__)
 
+# get info for all matchups
 @matchup_blueprint.route('/info', methods=['GET'])
 def get_playerinfo():
     cursor = db.get_db().cursor()
@@ -17,6 +18,7 @@ def get_playerinfo():
 
     return jsonify(json_data)
 
+# get info for a specific matchup
 @matchup_blueprint.route('/info/<mnum>', methods=['GET'])
 def get_indleagueinfo(mnum):
     cursor = db.get_db().cursor()

@@ -5,6 +5,7 @@ from src import db
 
 league_blueprint = Blueprint('league_blueprint', __name__)
 
+#get info from league
 @league_blueprint.route('/info', methods=['GET'])
 def get_playerinfo():
     cursor = db.get_db().cursor()
@@ -17,6 +18,7 @@ def get_playerinfo():
 
     return jsonify(json_data)
 
+# get info for a specific league
 @league_blueprint.route('/info/<lname>', methods=['GET'])
 def get_indleagueinfo(lname):
     cursor = db.get_db().cursor()
